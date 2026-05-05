@@ -113,5 +113,19 @@
         </tbody>
     </table>
 
-    <p class="update-time">Dawî nûkirin: 2026-05-04 10:30 AM</p>
-
+</body>.            <script>
+    function updateDate() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        
+        const currentTime = `Dawî nûkirin: ${year}-${month}-${day} ${hours}:${minutes}`;
+        document.querySelector('.update-time').innerText = currentTime;
+    }
+    
+    // Her carê ku rûpel vebû dê dem nû bibe
+    updateDate();
+</script>
