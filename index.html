@@ -65,15 +65,25 @@
         }
 
         tr:hover {
-            background-color: var(--light-green);
+            background-color: var(--light-
         }
-
-        .update-time {
-            font-size: 0.8rem;
-            color: #666;
-            text-align: center;
-            margin-top: 20px;
-        }
+        </body>
+<script>
+    function updateDate() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        
+        const currentTime = `Dawî nûkirin: ${year}-${month}-${day} ${hours}:${minutes}`;
+        document.querySelector('.update-time').innerText = currentTime;
+    }
+    
+    // Her carê ku rûpel vebû dê dem nû bibe
+    updateDate();
+</script>
 
     </style>
 </head>
@@ -113,19 +123,4 @@
         </tbody>
     </table>
 
-</body>.            <script>
-    function updateDate() {
-        const now = new Date();
-        const year = now.getFullYear();
-        const month = String(now.getMonth() + 1).padStart(2, '0');
-        const day = String(now.getDate()).padStart(2, '0');
-        const hours = String(now.getHours()).padStart(2, '0');
-        const minutes = String(now.getMinutes()).padStart(2, '0');
-        
-        const currentTime = `Dawî nûkirin: ${year}-${month}-${day} ${hours}:${minutes}`;
-        document.querySelector('.update-time').innerText = currentTime;
-    }
-    
-    // Her carê ku rûpel vebû dê dem nû bibe
-    updateDate();
-</script>
+</body>
